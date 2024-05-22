@@ -31,10 +31,13 @@ const payments = [
 
 const Hero = () => {
     return (
-        <section className={`grid min-h-[calc(100vh-84px)] grid-cols-2 items-center justify-between `} id={'hero'}>
-            <div className={``}>
+        <section
+            className={`grid min-h-[calc(100vh-84px)] grid-cols-2 gap-5 items-center justify-between py-10 mlg:grid-cols-1 `}
+            id={'hero'}
+        >
+            <div>
                 <div className={`mb-10`}>
-                    <h1 className={`mb-5 animate-fade-down text-balance text-[60px] leading-[80px]`}>
+                    <h1 className={`mb-5 animate-fade-down text-balance text-4xl md:text-5xl lg:text-[60px] leading-[80px]`}>
                         Always Track & Analyze Your Business Statistics To Succeed.
                     </h1>
                     <Text
@@ -60,7 +63,7 @@ const Hero = () => {
                     ))}
                 </div>
             </div>
-            <div className={`justify-self-end`}>
+            <div className={`lg:justify-self-end`}>
                 <img
                     className={`animate-wiggle animate-duration-[3s] animate-infinite`}
                     src={image}

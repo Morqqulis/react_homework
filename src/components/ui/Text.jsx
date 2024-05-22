@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
 const Text = ({ className, text }) => {
-    return <p className={`text-balance text-lg ${className}`}>{text}</p>
+    return <p className={`animate-flip-up text-balance text-lg ${className ?? ''}`}>{text}</p>
 }
 
 Text.propTypes = {

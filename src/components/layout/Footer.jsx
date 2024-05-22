@@ -3,8 +3,6 @@ import Logo from '../ui/Logo'
 import Socials from '../ui/Socials'
 import Title from '../ui/Title'
 
-
-
 const links = [
     {
         id: 1,
@@ -57,8 +55,8 @@ const Footer = () => {
     return (
         <footer className={`bg-foreground py-8 text-background`}>
             <div className='container'>
-                <div className={`mb-[85px] flex justify-between gap-5`}>
-                    <div>
+                <div className={`mb-[85px] flex justify-between gap-10 lg:gap-5 mlg:flex-col`}>
+                    <div className={`mmd:grid mmd:items-center mmd:justify-center`}>
                         <Logo className={`mb-10`} color={'white'} />
                         <Title className={`mb-8`} text={`Want to recieve our awesome stories?`} />
                         <Form
@@ -68,7 +66,7 @@ const Footer = () => {
                             autoComplete={'email'}
                         />
                     </div>
-                    <div className={`flex gap-[100px] whitespace-nowrap`}>
+                    <div className={`flex gap-[100px] whitespace-nowrap mlg:gap-[50px] mmd:flex-col `}>
                         <div>
                             <h5 className={`mb-6 font-extrabold text-white`}>Email</h5>
                             <a className={`block duration-300 hover:scale-105`} href='mailto:info@the18.design'>
@@ -95,7 +93,9 @@ const Footer = () => {
                         </ul>
                     </div>
                 </div>
-                <div className={`flex items-center justify-between gap-2.5`}>
+                <div
+                    className={`flex items-center justify-between gap-2.5 mmd:flex-wrap mmd:justify-center mmd:text-center`}
+                >
                     <p>© The 18 Design, All rights reserved.</p>
                     <Socials />
                 </div>

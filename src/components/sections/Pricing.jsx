@@ -1,8 +1,8 @@
-import Button from '../ui/Button'
+import image from '../../assets/images/pricing/pig.png'
+import Card from '../ui/Card'
 import Heading from '../ui/Heading'
 import Text from '../ui/Text'
 import Title from '../ui/Title'
-import image from '../../assets/images/pricing/pig.png'
 
 const cardContent = [
     {
@@ -40,8 +40,8 @@ const cardContent = [
 
 const Pricing = () => {
     return (
-        <section className={`pb-[200px]`} id={'pricing'}>
-            <div className={`mb-[60px] flex items-center justify-between`}>
+        <section className={`pb-[100px] lg:pb-[200px] `} id={'pricing'}>
+            <div className={`mb-[60px] flex items-center justify-between msm:gap-5 msm:flex-col-reverse`}>
                 <div className={`animate-wiggle animate-infinite`}>
                     <img src={image} alt='Man on a pig' width={470} height={500} />
                 </div>
@@ -56,35 +56,9 @@ const Pricing = () => {
                     />
                 </div>
             </div>
-            <div className={`grid grid-cols-3 gap-20 `}>
+            <div className={`grid grid-cols-3 gap-20 mlg:gap-10 mmd:grid-cols-2 msm:grid-cols-1`}>
                 {cardContent.map(card => (
-                    <div
-                        className={`group/card flex max-w-[436px] flex-col gap-[60px] border border-foreground p-10 duration-300 ease-linear animate-infinite hover:bg-foreground hover:text-background `}
-                        key={card.id}
-                    >
-                        <div className={`flex flex-col gap-5`}>
-                            <div className={`flex min-h-[77px] text-[20px] font-extrabold`}>
-                                <span>$</span>
-                                <Title className={`text--[80px]`} text={card.price} />
-                                <span className={`self-end`}>per month</span>
-                            </div>
-                            <Text text={card.description} />
-                        </div>
-                        <ul className={`mb-auto grid gap-5`}>
-                            {card.items.map(item => (
-                                <li key={item} className={`flex items-center gap-5`}>
-                                    <span
-                                        className={`h-2.5 w-2.5 animate-fade-left bg-foreground duration-300 ease-in group-hover/card:bg-background`}
-                                    ></span>
-                                    {item}
-                                </li>
-                            ))}
-                        </ul>
-                        <Button
-                            className={`group-hover/card:bg-background group-hover/card:text-foreground`}
-                            text={'Join'}
-                        />
-                    </div>
+                    <Card key={card.id} {...card} />
                 ))}
             </div>
         </section>

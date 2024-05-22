@@ -36,16 +36,19 @@ const listContent = [
 
 const HowItWorks = () => {
     return (
-        <section className={`flex justify-between gap-5 py-[200px]`} id={'howitworks'}>
-            <div>
-                <div className={`mb-[60px] grid max-w-[660px] gap-10`}>
+        <section
+            className={`flex justify-between gap-5 py-24 lg:py-[200px] mlg:flex-col mlg:items-center mlg:justify-center`}
+            id={'howitworks'}
+        >
+            <div className={`mlg:w-full`}>
+                <div className={`mb-[60px] grid max-w-[660px] gap-10 mlg:w-full mlg:max-w-full`}>
                     <Heading text={'How it works'} />
                     <Title className={`text-[50px]`} text={`Building the best space for collaboration.`} />
                 </div>
                 <ul className={`grid max-w-[627px] gap-12`}>
                     {listContent.map(item => (
                         <li className={`flex items-start gap-7`} key={item.id}>
-                            <img src={item.src} alt='figure image' width={100} height={100} />
+                            <img className={`mxs:hidden`} src={item.src} alt='figure image' width={100} height={100} />
                             <div className={`grid gap-2`}>
                                 <h4 className={`text-[28px]`}>{item.heading}</h4>
                                 <Text text={item.text} />

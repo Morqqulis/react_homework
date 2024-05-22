@@ -1,8 +1,8 @@
+import image from '../../assets/images/faqs/man.png'
 import Heading from '../ui/Heading'
 import Spoller from '../ui/Spoller'
 import Text from '../ui/Text'
 import Title from '../ui/Title'
-import image from '../../assets/images/faqs/man.png'
 
 const spollersContent = [
     {
@@ -33,8 +33,11 @@ const spollersContent = [
 ]
 const Faqs = () => {
     return (
-        <section className={`flex justify-between gap-[72px] pb-[200px]`} id={'faqs'}>
-            <div className={`max-w-[840px]`}>
+        <section
+            className={`flex items-start justify-between gap-[72px] pb-24 lg:pb-[200px] mlg:flex-col-reverse mlg:gap-10`}
+            id={'faqs'}
+        >
+            <div className={` lg:max-w-[840px]`}>
                 <Heading className={`mb-10`} text={'FAQs'} />
                 <div className={`mb-[60px] max-w-[554px]`}>
                     <Title className={`mb-5`} text={`Common Questions.`} />
@@ -44,13 +47,19 @@ const Faqs = () => {
                     />
                 </div>
                 {spollersContent.map((item, index) => (
-                    <div className={`border-b last:border-none border-foreground py-[18px]`} key={item.id}>
-                        <Spoller title={item.title} text={item.text} defaultOpen={index === 0} />
+                    <div className={`border-b border-foreground py-[18px] last:border-none`} key={item.id}>
+                        <Spoller {...item} defaultOpen={index === 0} />
                     </div>
                 ))}
             </div>
-            <div>
-                <img src={image} alt='man say hello to giraffe' width={600} height={620} />
+            <div className={`lg:min-w-[550px] mx-auto`}>
+                <img
+                    className={`w-full max-w-full`}
+                    src={image}
+                    alt='man say hello to giraffe'
+                    width={600}
+                    height={620}
+                />
             </div>
         </section>
     )

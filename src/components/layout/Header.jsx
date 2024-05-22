@@ -1,17 +1,38 @@
+import Burger from '../ui/Burger'
 import Button from '../ui/Button'
 import Logo from '../ui/Logo'
 import Menu from '../ui/Menu'
 
 const Header = () => {
     return (
-        <header className={`pt-8`}>
+        <header className={`pt-8 mmd:relative`}>
             <div className='container'>
-                <nav className={`flex items-center justify-between gap-5 whitespace-nowrap`}>
+                <nav className={`flex items-center justify-between gap-5 mxs:gap-2 whitespace-nowrap `}>
                     <div className={`flex gap-5`}>
+                        <Burger />
                         <Logo color={'black'} />
-                        <Menu />
+                        <Menu
+                            className={`group-[.menu-open]:-left-0 mmd:absolute mmd:-left-full mmd:top-[100px] mmd:z-10 mmd:h-screen mmd:w-2/4 mmd:flex-col mmd:items-center mmd:bg-foreground mmd:py-20 mmd:pl-5 mmd:text-2xl mmd:text-background mmd:duration-300 mmd:*:w-full mmd:*:text-center`}
+                        >
+                            <li
+                                className={`mx-auto mt-5 flex max-w-[80%] flex-col items-center justify-center gap-5 md:hidden`}
+                            >
+                                <Button
+                                    className={`action-btn w-full max-w-full`}
+                                    color={'white'}
+                                    text={'Log in'}
+                                    type={`button`}
+                                />
+                                <Button
+                                    className={`action-btn w-full max-w-full`}
+                                    color={'white'}
+                                    text={'Sign up'}
+                                    type={`button`}
+                                />
+                            </li>
+                        </Menu>
                     </div>
-                    <div className={`flex items-center gap-5`}>
+                    <div className={`flex items-center gap-5 mxs:gap-2.5`}>
                         <Button color={'white'} text={'Log in'} type={`button`} />
                         <Button color={'black'} text={'Sign up'} type={`button`} />
                     </div>

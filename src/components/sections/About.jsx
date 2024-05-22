@@ -19,8 +19,8 @@ const textContent = {
 }
 const About = () => {
     return (
-        <section className={`flex gap-[70px] py-[200px]`} id={'about'}>
-            <div className={``}>
+        <section className={`flex gap-[70px] py-10 md:py-28 lg:py-[200px]  mmd:flex-col-reverse 10 mmd:justify-center mmd:items-center`} id={'about'}>
+            <div className={`w-full`}>
                 <img
                     className={`block w-full max-w-full animate-wiggle animate-duration-[3s] animate-infinite`}
                     src={image}
