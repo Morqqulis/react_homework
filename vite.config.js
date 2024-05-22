@@ -8,8 +8,12 @@ const __dirname = path.dirname(new URL(import.meta.url).pathname)
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [react()],
-    // base: '/react_homework/',
-
+    base: './',
+    publicDir: 'public',
+    root: './',
+    build: {
+        outDir: 'dist'
+    },
     resolve: {
         alias: {
             '@': path.resolve(__dirname, './src'),
