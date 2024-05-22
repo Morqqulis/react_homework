@@ -9,11 +9,6 @@ const __dirname = path.dirname(new URL(import.meta.url).pathname)
 export default defineConfig({
     plugins: [react()],
     base: './',
-    publicDir: './public/',
-    root: './',
-    build: {
-        outDir: 'dist'
-    },
 
     resolve: {
         alias: {

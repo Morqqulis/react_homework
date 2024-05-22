@@ -2,6 +2,7 @@ import Button from '../ui/Button'
 import Heading from '../ui/Heading'
 import Text from '../ui/Text'
 import Title from '../ui/Title'
+import image from '../../assets/images/pricing/pig.png'
 
 const cardContent = [
     {
@@ -42,7 +43,7 @@ const Pricing = () => {
         <section className={`pb-[200px]`} id={'pricing'}>
             <div className={`mb-[60px] flex items-center justify-between`}>
                 <div className={`animate-wiggle animate-infinite`}>
-                    <img src='/images/pricing/pig.png' alt='Man on a pig' width={470} height={500} />
+                    <img src={image} alt='Man on a pig' width={470} height={500} />
                 </div>
                 <div className={`max-w-[750px] text-right`}>
                     <Heading className={`mb-10 ml-auto`} text={'Pricing'} />

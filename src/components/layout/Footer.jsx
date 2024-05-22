@@ -1,39 +1,9 @@
 import Form from '../ui/Form'
 import Logo from '../ui/Logo'
+import Socials from '../ui/Socials'
 import Title from '../ui/Title'
 
-const socials = [
-    {
-        id: 1,
-        src: '/images/footer/facebook.svg',
-        alt: 'Facebook',
-        href: '#'
-    },
-    {
-        id: 2,
-        src: '/images/footer/twitter.svg',
-        alt: 'Twitter',
-        href: '#'
-    },
-    {
-        id: 3,
-        src: '/images/footer/google.svg',
-        alt: 'Google',
-        href: '#'
-    },
-    {
-        id: 4,
-        src: '/images/footer/linkedin.svg',
-        alt: 'Linkedin',
-        href: '#'
-    },
-    {
-        id: 5,
-        src: '/images/footer/youtube.svg',
-        alt: 'Youtube',
-        href: '#'
-    }
-]
+
 
 const links = [
     {
@@ -127,15 +97,7 @@ const Footer = () => {
                 </div>
                 <div className={`flex items-center justify-between gap-2.5`}>
                     <p>© The 18 Design, All rights reserved.</p>
-                    <ul className={`flex items-center gap-5`}>
-                        {socials.map(social => (
-                            <li key={social.id}>
-                                <a className={`block duration-300 hover:scale-110 animate-infinite animate-wiggle-more hover:animate-stop`} href={social.href}>
-                                    <img src={social.src} alt={social.alt} />
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
+                    <Socials />
                 </div>
             </div>
         </footer>

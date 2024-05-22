@@ -1,23 +1,28 @@
+import image from '../../assets//images/hero/man.png'
+import master from '../../assets/images/hero/master.svg'
+import paypal from '../../assets/images/hero/paypal.svg'
+import visa from '../../assets/images/hero/visa.svg'
 import Form from '../ui/Form'
 import Text from '../ui/Text'
+
 const payments = [
     {
         id: 1,
-        src: '/images/hero/visa.svg',
+        src: visa,
         alt: 'Visa',
         width: 86,
         height: 40
     },
     {
         id: 2,
-        src: '/images/hero/master.svg',
+        src: master,
         alt: 'Mastercard',
         width: 60,
         height: 40
     },
     {
         id: 3,
-        src: '/images/hero/paypal.svg',
+        src: paypal,
         alt: 'Paypal',
         width: 120,
         height: 40
@@ -29,7 +34,7 @@ const Hero = () => {
         <section className={`grid min-h-[calc(100vh-84px)] grid-cols-2 items-center justify-between `} id={'hero'}>
             <div className={``}>
                 <div className={`mb-10`}>
-                    <h1 className={`mb-5 text-balance text-[60px] leading-[80px] animate-fade-down`}>
+                    <h1 className={`mb-5 animate-fade-down text-balance text-[60px] leading-[80px]`}>
                         Always Track & Analyze Your Business Statistics To Succeed.
                     </h1>
                     <Text
@@ -56,7 +61,13 @@ const Hero = () => {
                 </div>
             </div>
             <div className={`justify-self-end`}>
-                <img className={`animate-wiggle animate-infinite animate-duration-[3s]`} src='/images/hero/man.png' alt='Man image' width={550} height={580} />
+                <img
+                    className={`animate-wiggle animate-duration-[3s] animate-infinite`}
+                    src={image}
+                    alt='Man image'
+                    width={550}
+                    height={580}
+                />
             </div>
         </section>
     )

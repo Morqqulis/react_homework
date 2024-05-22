@@ -1,3 +1,4 @@
+import image from '../../assets/images/about/image.png'
 import Heading from '../ui/Heading'
 import Text from '../ui/Text'
 import Title from '../ui/Title'
@@ -21,8 +22,8 @@ const About = () => {
         <section className={`flex gap-[70px] py-[200px]`} id={'about'}>
             <div className={``}>
                 <img
-                    className={`block w-full max-w-full animate-wiggle animate-infinite animate-duration-[3s]`}
-                    src='/images/about/image.png'
+                    className={`block w-full max-w-full animate-wiggle animate-duration-[3s] animate-infinite`}
+                    src={image}
                     alt='About image. Man at the moon'
                     width={580}
                     height={500}

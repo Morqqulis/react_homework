@@ -2,6 +2,7 @@ import Heading from '../ui/Heading'
 import Spoller from '../ui/Spoller'
 import Text from '../ui/Text'
 import Title from '../ui/Title'
+import image from '../../assets/images/faqs/man.png'
 
 const tabsContent = [
     {
@@ -49,7 +50,7 @@ const Faqs = () => {
                 ))}
             </div>
             <div>
-                <img src='/images/faqs/man.png' alt='man say hello to giraffe' width={600} height={620} />
+                <img src={image} alt='man say hello to giraffe' width={600} height={620} />
             </div>
         </section>
     )
