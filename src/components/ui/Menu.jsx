@@ -2,22 +2,22 @@ const menuLinks = [
     {
         id: 1,
         label: 'About us',
-        href: '#'
+        href: '#about'
     },
     {
         id: 2,
         label: 'How it work',
-        href: '#'
+        href: '#howitworks'
     },
     {
         id: 3,
         label: 'Pricing',
-        href: '#'
+        href: '#pricing'
     },
     {
         id: 4,
         label: 'FAQs',
-        href: '#'
+        href: '#faqs'
     }
 ]
 

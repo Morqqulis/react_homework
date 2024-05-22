@@ -11,13 +11,11 @@ const App = () => {
         <div className={`wrapper `}>
             <Header />
             <main className={`container`}>
-                
-                    <Hero />
-                    <About />
-                    <HowItWorks />
-                    <Pricing />
-                    <Faqs />
-            
+                <Hero />
+                <About />
+                <HowItWorks />
+                <Pricing />
+                <Faqs />
             </main>
             <Footer />
         </div>

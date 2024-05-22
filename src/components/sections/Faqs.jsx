@@ -4,7 +4,7 @@ import Text from '../ui/Text'
 import Title from '../ui/Title'
 import image from '../../assets/images/faqs/man.png'
 
-const tabsContent = [
+const spollersContent = [
     {
         id: 1,
         title: 'How much does a Teams subscription cost?',
@@ -43,8 +43,8 @@ const Faqs = () => {
                         text={`The online form also provides links to a set of frequently asked questions, other information materials related to the financial disclosure programme.`}
                     />
                 </div>
-                {tabsContent.map((item, index) => (
-                    <div className={`border-b  border-foreground py-[18px]`} key={item.id}>
+                {spollersContent.map((item, index) => (
+                    <div className={`border-b last:border-none border-foreground py-[18px]`} key={item.id}>
                         <Spoller title={item.title} text={item.text} defaultOpen={index === 0} />
                     </div>
                 ))}
