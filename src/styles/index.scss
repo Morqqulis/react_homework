@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Neue Machina';
+    src:
+        url('/fonts/NeueMachina-Regular.woff2') format('woff2'),
+        url('/fonts/NeueMachina-Ultrabold.woff2') format('woff2');
+
+    font-display: swap;
+    font-weight: 400, 800;
+    font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply scroll-smooth font-sans;
+    }
+    html,
+    body,
+    #root {
+        @apply h-full;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+
+        &.light {
+            @apply bg-background text-foreground;
+        }
+        &.dark {
+            @apply bg-foreground text-background;
+        }
+    }
+
+    main {
+        @apply flex-[1_1_auto];
+        > * {
+            @apply min-w-0;
+        }
+    }
+}
+
+@layer components {
+    .wrapper {
+        @apply flex min-h-full flex-col;
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+
+    .scrollbar::-webkit-scrollbar {
+        @apply w-2;
+    }
+}
