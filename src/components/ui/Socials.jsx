@@ -1,8 +1,8 @@
-import facebook from '../../assets/images/footer/facebook.svg'
-import twitter from '../../assets/images/footer/twitter.svg'
-import google from '../../assets/images/footer/google.svg'
-import linkedin from '../../assets/images/footer/linkedin.svg'
-import youtube from '../../assets/images/footer/youtube.svg'
+import facebook from '@images/footer/facebook.svg'
+import google from '@images/footer/google.svg'
+import linkedin from '@images/footer/linkedin.svg'
+import twitter from '@images/footer/twitter.svg'
+import youtube from '@images/footer/youtube.svg'
 
 const socials = [
     {

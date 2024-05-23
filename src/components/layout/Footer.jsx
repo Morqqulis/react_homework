@@ -1,7 +1,7 @@
-import Form from '../ui/Form'
-import Logo from '../ui/Logo'
-import Socials from '../ui/Socials'
-import Title from '../ui/Title'
+import Form from '@ui/Form'
+import Logo from '@ui/Logo'
+import Socials from '@ui/Socials'
+import Title from '@ui/Title'
 
 const links = [
     {

@@ -1,9 +1,9 @@
-import Burger from '../ui/Burger'
-import Button from '../ui/Button'
-import Logo from '../ui/Logo'
-import Menu from '../ui/Menu'
-import ThemeToggler from '../ui/ThemeToggler'
-import useTheme from './../../hooks/useTheme'
+import useTheme from '@hooks/useTheme'
+import Burger from '@ui/Burger'
+import Button from '@ui/Button'
+import Logo from '@ui/Logo'
+import Menu from '@ui/Menu'
+import ThemeToggler from '@ui/ThemeToggler'
 
 const Header = () => {
     const [theme, toggleTheme] = useTheme('light')

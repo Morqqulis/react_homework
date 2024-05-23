@@ -1,6 +1,6 @@
+import logoBlack from '@images/logos/logo-black.svg'
+import logoWhite from '@images/logos/logo-white.svg'
 import PropTypes from 'prop-types'
-import logoWhite from '../../assets/images/logos/logo-white.svg'
-import logoBlack from '../../assets/images/logos/logo-black.svg'
 const Logo = ({ className, color }) => {
     return (
         <a
