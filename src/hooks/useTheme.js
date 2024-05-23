@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 
-const useTheme = () => {
+// Кастомный хук для управления темой
+function useTheme() {
     const getSystemTheme = () => {
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             return 'dark'
